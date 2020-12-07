@@ -1,0 +1,380 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.3;
+  color: rgb(86, 90, 92);
+ 
+}
+
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 100%; 
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 90, 95);
+}
+
+.slideshow, nav.large ul, .sitemap{
+  display: none;
+}
+
+header {
+  background: rgb(255, 255, 255);
+  padding: 0 0.8rem 0 0.8rem;
+}
+
+
+.logo {
+  float: left;
+  display: block;
+}
+
+.logo img{
+  height: 55px;
+  margin-top: 5px;
+}
+
+.hero {
+  background: rgb(245,245,245);
+  text-align: center;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+}
+
+.hero .details {
+  padding: .8rem 0.5rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin: 0 0 .1rem 0;
+  color: rgb(88, 88, 88);
+}
+
+.hero .since {
+  font-size: .9rem;
+  margin: 0 0 0.6rem;
+}
+
+.panel h3 {
+  background: rgb(255, 90, 95);
+  padding: .4rem;
+  font-size: .9rem;
+  color: white;
+}
+
+.panel h3, .panel-content {
+  padding: .6rem 1.25rem;
+}
+
+.model {
+  margin-bottom: 0.6rem;
+  padding: 0.4rem;
+  font-size: .85rem;
+}
+
+.model{
+  border-bottom: 1px solid rgba(220,224,224,0.5);
+}
+
+.model:last-of-type{
+  border-bottom-width: 0;
+}
+
+.info{
+  background: rgb(245,245,245);
+}
+
+.info .message {
+  padding: 0.8rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.info .message .photo {
+  margin-bottom: 1.5rem;
+  border-top: 0.6rem solid rgb(255, 90, 95);
+}
+
+.info .message .photo img {
+  display: block;
+  width: 100%;
+}
+
+.info .message .details{
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 540;
+
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background-color: #f44336;
+  margin: 1.8rem 1.8rem 1.5rem;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+}
+
+.infoleft, .inforight{
+  display: none;
+}
+
+footer {
+  background: rgb(245,245,245);
+  text-align: center;
+  font-size: .6rem;
+  padding: .5rem;
+  border-top: 1px solid rgb(220, 224, 224);
+}
+
+.hamburger{
+  float: right;
+  font-size: 2.5rem;
+  padding: 0.45rem;
+}
+
+.hamburger a{
+  text-decoration: none;
+  color: rgb(255, 90, 95);
+}
+
+nav.small {
+ background: blue;
+}
+
+nav.small ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+
+nav.small li {
+ margin: 0;
+ background: rgb(245,245,245);
+ text-align: center;
+ font-size: 1.1rem;
+ 
+}
+
+nav.small li, footer {
+ border-bottom: 1px solid rgb(180, 180, 180, 0.3);
+}
+
+nav.small a {
+ padding: 1rem 0;
+ display: block;
+ color: rgb(255, 90, 95);
+ text-decoration: none;
+}
+
+nav.small a:active {
+ background: rgb(40, 40, 40);
+}
+
+@media only screen and (min-width: 768px) {
+   header{
+    border-bottom: 0.55rem solid rgb(255, 90, 95);
+    border-top: 0.55rem solid rgb(255, 90, 95);
+   }
+
+   .hero img{
+    display: none;
+   }
+
+   .car-details .models{
+    display: none;
+   }
+
+   nav.large ul {
+   display: inline-block;
+   float: right;
+   }
+
+   nav.large li {
+   list-style: none;
+   display: inline-block;
+   padding: 1.4rem .6rem;
+   margin-right: 1.5rem;
+   font-weight: bold;
+   }
+
+   nav.large li a {
+   color: rgb(255, 90, 95);
+   display: block;
+   }
+
+   nav.small, .hamburger {
+    display: none;
+  }
+
+  footer{
+    display: none;
+  }
+
+  .slideshow{
+    display: block;
+  }
+
+  .slideshow-container{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+
+  .slideshow{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slideshow-item{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    opacity: 0;
+    animation: cycleImages 51s infinite;
+  }
+
+  .slideshow-item:nth-child(1){
+    animation-delay: 0s;
+  }
+
+  .slideshow-item:nth-child(2){
+    animation-delay: 10s;
+  }
+
+  .slideshow-item:nth-child(3){
+    animation-delay: 20s;
+  }
+
+  .slideshow-item:nth-child(4){
+    animation-delay: 30s;
+  }
+
+  .slideshow-item:nth-child(5){
+    animation-delay: 40s;
+  }
+
+  .slideshow-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .car-text{
+    max-width: 40%;
+    position: absolute;
+    top: 2%;
+    color: color: rgb(255, 90, 95);
+    left: 0;
+    background-color: rgba(255,255,255,0);
+    padding: 4rem 2rem;
+  }
+
+  .car-text h5{
+    font-size: 2rem;
+    text-shadow: 1px 1px 4px rgb(50,50,50);
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    margin-bottom: 1rem;
+  }
+
+  .car-text p{
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 4px rgb(50,50,50);
+    letter-spacing: 1px;
+  }
+
+  @keyframes cycleImages{
+    7%{
+      opacity: 1;
+    }
+    40%{
+      opacity: 0;
+    }
+  }
+
+  .info{
+    display: flex;
+    background: white;
+  }
+
+  .info .message .photo{
+    margin: 1rem;
+  }
+
+  .buttons{
+    background: rgb(245,245,245);
+    display: initial;
+  }
+
+  .infoleft, .inforight{
+    display: initial;
+  }
+
+  .buttons .button-info{
+    width: 100%;
+    background: rgb(245,245,245);
+    display: flex;
+    padding: 2rem;
+  }
+
+  .button{
+    width: 25%;
+  }
+
+  .buttonleft{
+    margin-right: 5.5rem;
+  }
+
+  .buttonright{
+    margin-left: 5.5rem;
+  }
+
+  .buttons .button-info p{
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .sitemap{
+    display: flex;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    color: black;
+    justify-content: center;
+  }
+
+  .links-column{
+    width: 20%;
+    text-align: center;
+  }
+
+}
