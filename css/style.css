@@ -152,6 +152,7 @@ footer {
   font-size: .6rem;
   padding: .5rem;
   border-top: 1px solid rgb(220, 224, 224);
+  padding-bottom: 0;
 }
 
 .hamburger{
@@ -183,7 +184,7 @@ nav.small li {
  
 }
 
-nav.small li, footer {
+nav.small li{
  border-bottom: 1px solid rgb(180, 180, 180, 0.3);
 }
 
@@ -197,6 +198,13 @@ nav.small a {
 nav.small a:active {
  background: rgb(40, 40, 40);
 }
+
+.social{
+    width: 100%;
+    background-color: white;
+    margin: 0.6rem auto;
+    padding: 1.5rem;
+  }
 
 @media only screen and (min-width: 768px) {
    header{
@@ -375,6 +383,17 @@ nav.small a:active {
   .links-column{
     width: 20%;
     text-align: center;
+  }
+
+  .links-column .links li{
+    color: rgb(70,70,70);
+  }
+
+  .social{
+    width: 100%;
+    background-color: rgb(245,245,245);
+    margin: 1rem auto 0;
+    padding: 2rem;
   }
 
 }
